@@ -98,11 +98,11 @@ class KapScraper:
                 bildirim_id = checkbox.get("id")
 
                 # 3. ŞİRKET KODU (Senin ilettiğin //td[4] sütunu - INVEO)
-                # sirket_kodu = tdler[3].get_text(strip=True)
+                sirket_kodu = tdler[3].get_text(strip=True)
                 # Hisse filtresi - sadece bu hisseler işlensin
-                TAKIP_HISSELERI = {"PENTA", "HEKTS", "AAGYO", "GENKM"}
-                if sirket_kodu not in TAKIP_HISSELERI:
-                    continue
+                # TAKIP_HISSELERI = {"PENTA", "HEKTS", "AAGYO", "GENKM"}
+                # if sirket_kodu not in TAKIP_HISSELERI:
+                    # continue
                 
                 # 4. BAŞLIK (Senin ilettiğin //td[7] ve //td[8] sütunları birleştiriliyor)
                 ana_baslik = tdler[6].get_text(strip=True)
